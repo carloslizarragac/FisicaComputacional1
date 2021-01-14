@@ -1,0 +1,90 @@
+% Ejemplo de un documento en LaTeX. 
+% LaTeX toma como comentario cualquier texto a la derecha del símbolo % 
+% La notación en LaTeX es:  \nombre_de_la_función[argumentos]{opciones}
+
+% \documentclass{} Es el primer comando obligatorio en cualquier documento.  
+% Ademas de article, puede ser report o book. 
+\documentclass{article} 
+                                     
+ 
+% Bibliotecas adicionales a incluir. 
+% \usepackage es la forma de añadir bibliotecas adicionales a los documentos LaTeX.
+% En ese caso para añadir caracteres en Español (á, é, í, ó, ú, ñ, ü, ¡, otros) 
+\usepackage[utf8]{inputenc} 
+
+% Incluimos la biblioteca para la inclusión de imágenes gif, png, jpeg. 
+\usepackage{graphicx} 
+
+% Asignamos un título, autor y fecha al documento
+\title{Ejemplo de Documento} 
+\author{Mi Nombre \\
+             Departamento de Física \\
+             Universidad de Sonora} 
+% La doble diagonal invertida forza un cambio de renglón.
+% Fija la fecha de hoy al documento  compilado. 
+\date{\today} 
+ 
+% Termina todo el preámbulo y sigue el inicio del documento con la instrucción \begin{document}
+\begin{document}  
+% La instrucción \begin{document} debe cerrarse al final del documento con \end{document} 
+
+% Crea el título del documento, con autor y fecha incluidos. 
+\maketitle 
+    
+% Crear una sección del documento, enumerada automáticamente.
+\section{Primera Sección} 
+\subsection{Primera Subsección}
+
+% Testo del documento 
+    
+\textbf{Palabra en Negritas:} Este es un ejemplo de un programa fuente en \LaTeX.
+% Notamos el . al final de la instrucción \LaTeX
+     \LaTeX{} es un programa idel para elaborar \textit{textos (en itálicas)} que permite 
+escribir ecuaciones
+en un reglón tales como 
+      $a^2+b^2=c^2$ 
+% El símbolo $ le indica a  LaTeX que lo maneje como una expresión matemática.
+También es posible escribir ecuaciones por separado:
+
+% Crear un entorno matemático para escribir ecuaciones. 
+    \begin{equation} 
+    \gamma^2+\theta^2=\omega^2
+    \end{equation}
+Si no se insertan renglones en blanco \LaTeX{} continuará el texto hasta terminar el párrafo. 
+ 
+Observen que aun cuando escribimos un párrafo en 
+varios renglones, \LaTeX{} construye un párrafo de
+longitud completa sin interrupción. Lo mismo        cualquiera     que sean   los    espacios   introducidos
+en                        el                texto, estos      son ignorados.
+ 
+Para comenzar un nuevo párrafo, dejamos una renglón en blanco. 
+ 
+Cuando deseamos escribir listas, hay varias opciones: numeradas y no numeradas.
+ 
+Ejemplo de lista sin enumerar:
+\begin{itemize}
+\item {Primer elemento}
+\item {Segundo elemento}
+\end{itemize}
+ 
+Ejemplo de lista enumerada:
+\begin{enumerate}
+\item {Primer elemento}
+\item {Segundo elemento}
+\end{enumerate}
+ 
+ 
+Para insertar imágenes, escribimos las siguientes instrucciones:
+
+% Imagen centrada
+\begin{center} 
+\begin{figure}
+    \centering
+    \includegraphics[height=3cm]{Luna.jpg}
+    \caption{Imágen de la Luna} 
+\end{figure}   
+\end{center}
+
+% Este es el fin del documento (Debe corresponder al \begin{document} del principio).
+\end{document} 
+ 
